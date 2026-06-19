@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gbancevpt.github.io/leyusportsweb-com-cn/sitemap.xml
