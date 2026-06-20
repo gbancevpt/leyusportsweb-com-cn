@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于 B体育 · 温和叙说</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafaf9;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e1e1e;
+            line-height: 1.75;
+            padding: 3rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 680px;
+            width: 100%;
+        }
+
+        .hero-tag {
+            font-size: 0.875rem;
+            letter-spacing: 0.06em;
+            color: #8b8b8b;
+            margin-bottom: 2.5rem;
+            border-left: 3px solid #c7b5a6;
+            padding-left: 1rem;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 350;
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.01em;
+            color: #222;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #5a5a5a;
+            margin-bottom: 2.8rem;
+            border-bottom: 1px solid #e6ddd4;
+            padding-bottom: 1.8rem;
+        }
+
+        .intro p {
+            margin-bottom: 1.6rem;
+            font-size: 1rem;
+        }
+
+        .intro a {
+            color: #2d4b3b;
+            text-decoration: none;
+            border-bottom: 1px solid #b5cbb9;
+            font-weight: 400;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .intro a:hover {
+            border-bottom-color: #1e3328;
+            color: #1c3d2b;
+        }
+
+        .highlight-list {
+            list-style: none;
+            margin: 2.5rem 0 2.8rem 0;
+            padding: 0;
+        }
+
+        .highlight-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.2rem 1rem;
+            margin-bottom: 1rem;
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 0 0 1px #f0ede8;
+            transition: box-shadow 0.2s;
+        }
+
+        .highlight-list li:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 0 0 1px #ddd6ce;
+        }
+
+        .list-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: #eae5de;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #4a4a4a;
+            margin-top: 0.2rem;
+        }
+
+        .list-text {
+            flex: 1;
+        }
+
+        .list-text strong {
+            font-weight: 500;
+            color: #2b2b2b;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .list-text span {
+            color: #4b4b4b;
+            font-size: 0.95rem;
+        }
+
+        .scene-note {
+            background: #f5f2ee;
+            padding: 1.8rem 1.8rem;
+            border-radius: 24px;
+            margin: 2.2rem 0 2.5rem 0;
+        }
+
+        .scene-note p {
+            font-size: 0.98rem;
+            color: #3b3b3b;
+            margin-bottom: 0.6rem;
+        }
+
+        .scene-note p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-mini {
+            margin: 2rem 0 2rem 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px dashed #d9d0c5;
+            padding: 1rem 0;
+        }
+
+        .faq-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 450;
+            color: #2f2f2f;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+        }
+
+        .faq-a {
+            color: #5e5e5e;
+            font-size: 0.95rem;
+        }
+
+        .close-note {
+            margin-top: 3rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e1d8cf;
+            font-size: 0.95rem;
+            color: #5e5e5e;
+            text-align: left;
+        }
+
+        .close-note a {
+            color: #2d4b3b;
+            text-decoration: none;
+            border-bottom: 1px solid #c1d3bd;
+        }
+
+        .close-note a:hover {
+            border-bottom-color: #1e3328;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 2rem 1rem;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+            .highlight-list li {
+                padding: 1rem 0.9rem;
+            }
+            .scene-note {
+                padding: 1.4rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="hero-tag">—— 一个安静的开场</div>
+
+        <h1>从一处站点<br>开始了解 B体育</h1>
+        <div class="subhead">不喧哗，只把话说清楚。</div>
+
+        <div class="intro">
+            <p>
+                有些网站你打开就关掉了，有些页面却愿意多停留一会儿。
+                第一次见到 <a href="https://m-home-bsports.com">B体育</a> 的时候，心里想的是「原来可以这么干净」。
+                没有弹窗催促，没有浮夸的标语，就像一间整理过的起居室——东西都在，但留给呼吸的空间更多。
+            </p>
+            <p>
+                后来慢慢发现，这种简洁并不是什么都没有，而是把真正需要的东西放在了手边。
+                作为一个面向体育爱好者的线上空间，它提供赛事信息、运动社区与相关服务，
+                而最打动人的，也许是那种不打扰的陪伴感。
+            </p>
+        </div>
+
+        <ul class="highlight-list">
+            <li>
+                <div class="list-icon">·</div>
+                <div class="list-text">
+                    <strong>信息呈现，而非堆砌</strong>
+                    <span>页面布局留有余地，内容分类清晰，不会让人一上来就迷失在按钮和横幅里。</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-icon">·</div>
+                <div class="list-text">
+                    <strong>围绕体育，但不狭隘</strong>
+                    <span>无论是热门赛事、运动资讯还是社群互动，<a href="https://m-home-bsports.com">B体育</a> 都保持着一种开放而克制的语调，适合不同偏好的人慢慢探索。</span>
+                </div>
+            </li>
+            <li>
+                <div class="list-icon">·</div>
+                <div class="list-text">
+                    <strong>可信的细节，藏在日常里</strong>
+                    <span>没有夸张的承诺，只有稳定的访问体验与清晰的导航——这些看似平常的东西，恰好构成了长期使用的理由。</span>
+                </div>
+            </li>
+        </ul>
+
+        <div class="scene-note">
+            <p>🕊️ 一个常见的场景：</p>
+            <p>晚上打开手机，想随便看看最近的比赛消息，但又不想被算法推着走。
+            在 <a href="https://m-home-bsports.com">B体育</a> 里，你可以按自己的节奏浏览，像翻一本纸质杂志——不着急，也没人催你。</p>
+        </div>
+
+        <div class="faq-mini">
+            <div class="faq-item">
+                <div class="faq-q">这个网站适合什么样的人？</div>
+                <div class="faq-a">喜欢体育内容，同时希望界面干净、不被打扰的人。无论是偶尔查看赛事，还是长期关注某个运动项目，都能找到舒服的落脚点。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">如何判断一个网站是否值得信赖？</div>
+                <div class="faq-a">不妨先花几分钟浏览它的结构、文字风格和更新节奏。一个不急于推销自己的地方，往往更值得坐下来看看。<a href="https://m-home-bsports.com">B体育</a> 给我的第一印象正是如此。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">必须注册才能使用吗？</div>
+                <div class="faq-a">很多内容不需要注册即可浏览。当然，如果你想参与社区讨论或个性化收藏，注册流程也设计得相当轻量。</div>
+            </div>
+        </div>
+
+        <div class="close-note">
+            <p>写到最后，想起一句话：真正好的东西，不需要大声喊。
+            如果你也喜欢体育，或者只是好奇一个安静的站点长什么样，
+            不妨去 <a href="https://m-home-bsports.com">B体育</a> 逛一逛——用你自己的节奏。</p>
+            <p style="margin-top: 1.2rem; color: #8a7f72; font-size: 0.9rem;">—— 纯粹分享 · 不说服 · 2025</p>
+        </div>
+    </div>
+</body>
+</html>
