@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>od体育 · 知识库入口</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f5f7;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #1e2a3a;
+            line-height: 1.6;
+            padding: 2rem 1.5rem;
+        }
+
+        .page-wrap {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        /* 目录式标题区 / hero */
+        .hero {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2.5rem 2rem 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.02);
+            border: 1px solid #e6eaef;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.6rem;
+            color: #0b1a2b;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.3rem 0.6rem;
+        }
+
+        .hero h1 small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #6b7a8c;
+            background: #eef2f6;
+            padding: 0.1rem 0.9rem;
+            border-radius: 40px;
+            border: 1px solid #dce2e9;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            color: #3f4c5e;
+            max-width: 80%;
+            margin-top: 0.25rem;
+        }
+
+        @media (max-width: 640px) {
+            .hero p {
+                max-width: 100%;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+
+        /* 网格卡片布局：目录感 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.8rem 1.5rem 1.6rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03), 0 1px 2px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s, transform 0.15s;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.7rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #eef3f8;
+            color: #1c2a3c;
+        }
+
+        .card ul, .card p {
+            font-size: 0.95rem;
+            color: #2c3a4b;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card li {
+            padding: 0.3rem 0;
+            display: flex;
+            align-items: baseline;
+            gap: 0.4rem;
+        }
+
+        .card li::before {
+            content: "·";
+            color: #8495a8;
+            font-weight: 700;
+            margin-right: 0.2rem;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.6rem;
+            margin-top: 0.6rem;
+        }
+
+        .badge {
+            background: #eef3f9;
+            font-size: 0.8rem;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            color: #1d3b5c;
+            border: 1px solid #d6e0eb;
+        }
+
+        /* 说明区 + 提示区 + 相关信息区 组合 */
+        .info-panel {
+            background: #ffffff;
+            border-radius: 18px;
+            border: 1px solid #e2e8f0;
+            padding: 1.8rem 2rem 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.02);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem 3rem;
+        }
+
+        .info-col {
+            flex: 1 1 280px;
+        }
+
+        .info-col h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: #162433;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-col h4 span {
+            background: #dce5ef;
+            border-radius: 40px;
+            padding: 0 0.7rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #284a6b;
+            letter-spacing: 0.04em;
+        }
+
+        .info-col p, .info-col .hint {
+            font-size: 0.95rem;
+            color: #2c3c4e;
+            margin-bottom: 0.4rem;
+        }
+
+        .info-col .hint {
+            background: #f4f8fd;
+            padding: 0.7rem 1rem;
+            border-radius: 12px;
+            border-left: 4px solid #b0c6db;
+            border: 1px solid #e3eaf2;
+            border-left-width: 4px;
+        }
+
+        .inline-link {
+            color: #1d5a8f;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted #b2c8de;
+        }
+
+        .inline-link:hover {
+            border-bottom: 2px solid #1d5a8f;
+            color: #0f3b63;
+        }
+
+        .faq-mini {
+            background: #ffffff;
+            border-radius: 18px;
+            border: 1px solid #e2e8f0;
+            padding: 1.8rem 2rem 2rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.02);
+            margin-bottom: 2.5rem;
+        }
+
+        .faq-mini h4 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            color: #0f263b;
+        }
+
+        .faq-item {
+            margin-bottom: 1.2rem;
+            border-bottom: 1px solid #edf2f7;
+            padding-bottom: 1rem;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: #1a3148;
+            margin-bottom: 0.2rem;
+            font-size: 0.95rem;
+        }
+
+        .faq-a {
+            color: #3a4d62;
+            font-size: 0.9rem;
+            padding-left: 0.6rem;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5f7287;
+            border-top: 1px solid #dce3ec;
+            padding-top: 1.8rem;
+            margin-top: 0.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .footer-note a {
+            color: #1d5a8f;
+            text-decoration: none;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+            .card-grid {
+                gap: 1.2rem;
+            }
+            .info-panel {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- hero / 目录标题 -->
+    <div class="hero">
+        <h1>
+            知识路径 · od体育
+            <small>对照·查询·延伸</small>
+        </h1>
+        <p>聚合常见信息节点，便于日常检索、横向比较与背景阅读。内容均指向公开资料与站点。</p>
+    </div>
+
+    <!-- 卡片网格：目录感布局 -->
+    <div class="card-grid">
+        <div class="card">
+            <h3>平台概览</h3>
+            <ul>
+                <li>体育赛事覆盖类型</li>
+                <li>数据更新与统计周期</li>
+                <li>界面语言及地区设定</li>
+            </ul>
+            <div class="badge-list">
+                <span class="badge">足球</span>
+                <span class="badge">篮球</span>
+                <span class="badge">网球</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>常用功能</h3>
+            <ul>
+                <li>即时比分与赛程</li>
+                <li>历史数据对照</li>
+                <li>球队/选手档案</li>
+                <li>自定义关注列表</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>信息参考</h3>
+            <ul>
+                <li>联赛积分与排名</li>
+                <li>交锋记录</li>
+                <li>比赛技术统计</li>
+            </ul>
+            <p style="margin-top: 0.6rem; font-size: 0.9rem;">数据更新频率：实时 / 每15分钟</p>
+        </div>
+
+        <div class="card">
+            <h3>延伸阅读</h3>
+            <ul>
+                <li>赛季前瞻与回顾</li>
+                <li>规则与术语说明</li>
+                <li>相关体育百科</li>
+                <li>用户指南摘要</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 说明区 + 提示区 + 相关信息区  组合面板 -->
+    <div class="info-panel">
+        <div class="info-col">
+            <h4>说明 <span>ABOUT</span></h4>
+            <p>本页面为 <a href="https://cnsite--odsports.com" class="inline-link">od体育</a> 知识库入口，收录常见查询路径与信息分类。内容基于平台公开功能整理，不包含非公开数据或内部逻辑。</p>
+            <p style="margin-top: 0.5rem;">所有引用均以站点呈现为准，建议结合具体比赛或联赛页面进行对照。</p>
+        </div>
+
+        <div class="info-col">
+            <h4>提示 <span>TIPS</span></h4>
+            <div class="hint">
+                <strong>快速定位：</strong>使用站内搜索栏输入球队、联赛或日期范围，可缩小信息范围。<br>
+                <strong>多语言：</strong>界面支持中/英文切换，部分数据源以英文标识为主。<br>
+                <strong>移动端适配：</strong>功能模块在手机浏览器上同样可用。
+            </div>
+        </div>
+
+        <div class="info-col">
+            <h4>相关信息 <span>RELATED</span></h4>
+            <p>· 数据延迟说明：实时数据通常延迟30秒内，统计类数据于比赛结束后15分钟更新。</p>
+            <p>· 术语对照：常用足球术语（xG、控球率、预期进球）在平台内附有简要解释。</p>
+            <p>· 历史赛季存档：部分联赛提供近5个赛季的积分与数据回溯。</p>
+        </div>
+    </div>
+
+    <!-- FAQ 摘要区 -->
+    <div class="faq-mini">
+        <h4>常见查询摘要</h4>
+
+        <div class="faq-item">
+            <div class="faq-q">如何快速找到某支球队的近期赛程？</div>
+            <div class="faq-a">在顶部搜索框输入球队名称，选择「赛程」标签即可显示未来30天内的比赛。也可通过联赛页面筛选。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">历史交锋记录在哪里查看？</div>
+            <div class="faq-a">进入球队档案页，选择「交锋记录」选项卡，可展示与指定对手的近10场对阵数据 (主客、比分、控球率等)。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">数据统计中的“预期进球 (xG)”如何理解？</div>
+            <div class="faq-a">xG 基于射门位置、射门方式等模型估算的进球概率，数值越高表示得分机会越好。平台内 xG 数据以 0.00 ~ 5.00+ 显示。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">是否支持多联赛同时关注？</div>
+            <div class="faq-a">可以。通过「我的关注」功能添加最多15个联赛或球队，首页将展示自定义信息流。</div>
+        </div>
+    </div>
+
+    <!-- 脚注 -->
+    <div class="footer-note">
+        信息来源：<a href="https://cnsite--odsports.com">od体育</a> · 数据仅供个人参考，请以站点实时页面为准。
+    </div>
+
+</div>
+</body>
+</html>
