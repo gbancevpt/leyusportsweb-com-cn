@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>B体育 · 从一条链接说起</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      color: #1e1e1e;
+      padding: 2rem 1.5rem 4rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    /* 开篇短句 —— 像一句干净的标题 */
+    .opening {
+      margin-top: 3rem;
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: #0f0f0f;
+      border-left: 4px solid #d4a373;
+      padding-left: 1.2rem;
+    }
+
+    .opening em {
+      font-style: normal;
+      background: #f0ebe3;
+      padding: 0 0.2rem;
+    }
+
+    /* 承接段落 —— 温和地解释“为什么” */
+    .lead {
+      margin-top: 2.2rem;
+      font-size: 1.05rem;
+      color: #2c2c2c;
+    }
+
+    .lead p {
+      margin-bottom: 1.4rem;
+    }
+
+    .lead a {
+      color: #1e1e1e;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #c7b7a3;
+      font-weight: 500;
+      transition: text-decoration-color 0.2s;
+    }
+
+    .lead a:hover {
+      text-decoration-color: #1e1e1e;
+    }
+
+    /* 特点列表 —— 极简卡片，克制叙述 */
+    .features {
+      margin-top: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .feature-item {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.2rem 1.6rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.2s;
+      border: 1px solid #ecebe8;
+    }
+
+    .feature-item:hover {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .feature-item strong {
+      display: block;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      color: #1b1b1b;
+    }
+
+    .feature-item span {
+      display: block;
+      font-size: 0.95rem;
+      color: #4d4d4d;
+      line-height: 1.6;
+    }
+
+    /* 温和结尾 —— 像一句自然的收束 */
+    .closing {
+      margin-top: 3.8rem;
+      padding-top: 2.2rem;
+      border-top: 1px solid #e5e0d9;
+      font-size: 0.95rem;
+      color: #5a5a5a;
+      text-align: left;
+    }
+
+    .closing a {
+      color: #1e1e1e;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #c7b7a3;
+      font-weight: 500;
+      transition: text-decoration-color 0.2s;
+    }
+
+    .closing a:hover {
+      text-decoration-color: #1e1e1e;
+    }
+
+    /* 响应式细节 */
+    @media (max-width: 480px) {
+      body {
+        padding: 1.2rem 1rem 3rem;
+      }
+
+      .opening {
+        font-size: 1.8rem;
+        padding-left: 1rem;
+        border-left-width: 3px;
+      }
+
+      .feature-item {
+        padding: 1rem 1.2rem;
+      }
+
+      .lead {
+        font-size: 1rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .opening {
+        font-size: 2.6rem;
+      }
+    }
+
+    /* 极小留白装饰 */
+    .quiet-space {
+      height: 0.6rem;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- 开场短句 —— 直接、干净 -->
+  <div class="opening">
+    一个域名，<br>一段简短的路标。
+  </div>
+
+  <!-- 承接段落 —— 自然解释用户最关心的：这个网站是做什么的 -->
+  <div class="lead">
+    <p>
+      当你看到「B体育」这三个字，大概会想：这是一个平台的名字，但具体指向什么？其实答案很朴素——<a href="https://ssl-bty.com">B体育</a> 是一个你可以直接访问的站点，它承载着体育相关的内容与服务。没有绕弯子的包装，也没有多余的修饰。
+    </p>
+    <p>
+      我最初点开这个链接时，和大多数人一样，只想快速确认它是否对路。页面干净，加载很快，没有铺天盖地的弹窗。后来慢慢发现，它更像一个安静的起点——你从那里开始，按自己的节奏去探索。
+    </p>
+  </div>
+
+  <!-- 特点列表 —— 用克制的叙述，而不是口号 -->
+  <div class="features">
+    <div class="feature-item">
+      <strong>直截了当的入口</strong>
+      <span>不需要在几个页面之间来回跳转，找到核心内容的路径很短。对于想快速了解的人来说，这省下了不少时间。</span>
+    </div>
+    <div class="feature-item">
+      <strong>信息密度适中</strong>
+      <span>页面上的文字和模块没有堆砌感。每个部分都有它的位置，你不会觉得被信息推着走，也不会觉得空无一物。</span>
+    </div>
+    <div class="feature-item">
+      <strong>风格偏向实用</strong>
+      <span>没有花哨的动画或复杂的布局，视觉上让位于功能。如果你更在意“能不能用”而不是“好不好看”，这种取向会让人舒服。</span>
+    </div>
+    <div class="feature-item">
+      <strong>保持更新节奏</strong>
+      <span>内容会随着时间调整，不是那种建好就丢在角落的站点。从几次访问的对比来看，团队在持续维护它。</span>
+    </div>
+  </div>
+
+  <!-- 温和结尾 —— 像一句安静的提醒，链接自然融入 -->
+  <div class="closing">
+    如果你也好奇这个站点具体长什么样，或者想亲自判断它是否适合自己，可以直接走一趟 <a href="https://ssl-bty.com">B体育</a>。有时候，一个链接背后的东西，比第一眼看到的要多一些。
+  </div>
+
+  <!-- 极小的留白装饰，让页面呼吸 -->
+  <div class="quiet-space"></div>
+
+</div>
+</body>
+</html>
